@@ -24,15 +24,15 @@ public class VendaCurso {
     @Column(nullable = false)
     private boolean status;
 
-    @Column(name= "data_venda")
+    @Column(name= "data_venda", updatable = false)
     private LocalDate dataVenda;
-
+/*
     @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name = "id_cursos")
     private Cursos idCursos;
 
-    @OneToMany(cascade=CascadeType.ALL)
+    /*@OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name = "id_alunos")
-    private Cursos idAluno;
+    private Cursos idAluno;*/
 
 }

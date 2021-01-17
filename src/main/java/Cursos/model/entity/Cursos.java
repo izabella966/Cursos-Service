@@ -33,7 +33,7 @@ public class Cursos {
     @Column(nullable = false, length = 8)
     private Double preco;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "fk_produtor")
-    private Produtor produtor;
+    private Produtor produtor;*/
 }

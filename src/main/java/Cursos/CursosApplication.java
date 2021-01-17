@@ -18,25 +18,29 @@ public class CursosApplication {
     public CommandLineRunner run(@Autowired LoginRepository repositorylogin, @Autowired AlunoRepository repositoryaluno, @Autowired ProdutorRepossitory repositoryprod,
                                  @Autowired CursosRepository repositorycursos, @Autowired VendaCursoRepository repositoryvenda){
         return  args -> {
-
+/*
             Login login;
             login = Login.builder().email("izabella@gmail.com").senha("abc123").build();
             repositorylogin.save(login);
-/*
+
             Login login2;
             login2 = Login.builder().email("tereza@gmail.com").senha("abc123").build();
             repositorylogin.save(login2);
 
             Aluno aluno2;
-            aluno2 = Aluno.builder().nome("tereza").data_nascimento("23-10-2020").id_login(login).build();
+            aluno2 = Aluno.builder().nome("tereza").data_nascimento("23-10-2020").id_login(login2).build();
             repositoryaluno.save(aluno2);
 
             Aluno aluno;
             aluno = Aluno.builder().nome("joao").data_nascimento("23-10-2020").id_login(login).build();
-            repositoryaluno.save(aluno); */
+            repositoryaluno.save(aluno);
+
+            Produtor produtor2;
+            produtor2 = Produtor.builder().nome("tereza").conta_bancaria("09373628").cpf("02903876534").id_login(login2).build();
+            repositoryprod.save(produtor2);
 
             Produtor produtor;
-            produtor = Produtor.builder().nome("marcos mion").conta_bancaria("09373628").cpf("02903876534").id_login(login).build();
+            produtor = Produtor.builder().nome("joao").conta_bancaria("09373628").cpf("02903876534").id_login(login).build();
             repositoryprod.save(produtor);
 
             Cursos cursos;
